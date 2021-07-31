@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', cursive;
+    /* font-family: 'Otomanopee One', sans-serif; */
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-height: 600px)  {
+    body{
+        height: 100vh;
+
+    }  
+    .my_body{
+        margin-top: 0px;
+    }  
+}
+
+.my_body{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.searchBar{
+    width: 35rem;
+    height: 65px;
+    border-radius: 50px;
+    font-family: 'Merienda', cursive;
+    box-shadow:-15px -15px 15px rgba(255, 255, 255, .2),
+    15px 15px 15px rgba(0, 0, 0, .1),
+    inset -5px -5px 5px rgba(255, 255, 255,.2),
+    inset 5px 5px 5px rgba(0, 0, 0, .1) ;
+    background-color: #fff;
+    display: flex;
+    vertical-align: middle;
+}
+
+.searchBar :nth-child(1){
+    height: 100%;
+    width: 70%;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding-left: 5%;
+    font-size: 20px;
+    background-color: transparent;
+}
+.searchBar :nth-child(2){
+    height: 100%;
+    width: 30%;
+    border: none;
+    border-radius: 50px;
+    background-color: cyan;
+    font-size: 20px;
+    box-shadow: inset -5px -5px 5px rgba(134, 15, 15, 0.2);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.searchBar :nth-child(2):hover{
+    background-color: rgb(40, 224, 15);
+}
+
+.card{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width:400px;
+    height: 432px;
+    display: flex;
+    border-radius: 15px;
+    /* box-shadow:-15px -15px 15px rgba(255, 255, 255, .2),15px 15px 15px rgba(0, 0, 0, .1); */
+    box-shadow:-15px -15px 15px rgba(255, 255, 255, .2),
+    15px 15px 15px rgba(0, 0, 0, .1),
+    inset -5px -5px 5px rgba(255, 255, 255,.2),
+    inset 5px 5px 5px rgba(0, 0, 0, .1) ;
+    background-image: url(./photos/short.png);
+    background-size: cover;
+    background-color: aqua;
+    background-position: bottom;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+   justify-content: space-evenly;
+
+}
+div{
+    text-align: center;
+}
+.place_date {
+    z-index: 1;
+}
+.cloud{
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: row;
+    background-image: url('./photos/1-white-clouds-png-image-thumb.png');
+    background-size:50%;
+    width:calc(10rem*var(--i));
+    height: 27rem;
+
+    background-position: bottom;
+    background-repeat: repeat-x;
+    animation: final calc(2s*var(--i)) linear infinite ;
+}
+
+
+
+#cloud1{
+    top:22%;
+    width: 30rem;
+    background-image: url('./photos/short.png');
+    animation-duration: 2s; 
+}
+#cloud2{
+    top:23%;
+    width: 48rem;
+    background-image: url('./photos/short.png');
+}
+#cloud3{
+    top:25%;
+    left: -5%;
+}
+#cloud4{
+    top:24%;
+    left: -15%;
+}
+
+.icon{
+    width: 2rem;
+    height: 2rem;
+    border: 2px soild black;
+}
+
+.temp{
+
+
+    border: 2px soild black;
+}
+
+#icon {
+    width: 30%;
+    height: 20%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: iconAnimate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes iconAnimate {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes final {
+    from {
+        background-position-x: 0%;
+    }
+
+    to {
+        background-position-x: 100%;
+    } 
+   
+}
+
+@media only screen and (max-width:768px) {
+    .searchBar{
+        width: 27rem;
+    }
+    
+}
+@media only screen and (max-width:480px) {
+    .searchBar{
+        width: 345px;
+        height: 55px;
+    }
+    .card{
+        width: 333px;
+    }
+}

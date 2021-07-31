@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=Otomanopee+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./weather.css">
+
+</head>
+
+<body>
+        <div class="my_body">
+            <div class="searchBar">
+                <input type="text" id="city" placeholder="Enter the name of city"><abbr id="searchBtn">search</abbr>
+            </div>
+            <div class="card">
+                <div id="icon"></div>
+                <div>
+                    <h1 class="temp">WELCOME</h1>
+                    <h1 class="temp"></h1>
+                    <p id="min_max"></p>
+                </div>
+                <div class="place_date">
+                    <h1 class="place"></h1>
+                    <p id="date"></p>
+                </div>
+                <div class=" cloud" id="cloud1" style="--i:1;"></div>
+                <div class=" cloud" id="cloud2" style="--i:2;"></div>
+                <div class=" cloud" id="cloud3" style="--i:3;"></div>
+                <div class=" cloud" id="cloud4" style="--i:4;"></div>
+                <div class=" cloud" id="cloud5" style="--i:5;"></div>
+                <div class=" cloud" id="cloud6" style="--i:6;"></div>
+
+            </div>
+        </div>
+</body>
+<script src=" ./weather.js"></script>
+</html>
